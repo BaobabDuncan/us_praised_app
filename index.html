@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>Armageddom</title>
+    
+    <!-- Application my style sheet file -->
+    <link rel="stylesheet" type="text/css" href="./css/mystyle.css"/>
+    
+	
+	
+    <!-- jQuery and jQtouch script file -->
+    <style type="text/css" media="screen">@import "./jqtouch/jqtouch.css";</style>
+	<style type="text/css" media="screen">@import "./themes/apple/theme.css";</style>
+	<script src="./jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+    
+    
+    
+    <!-- Application Base script files -->
+	<script type="text/javascript" src="./js/db/DBHandler.js"></script>
+    <script type="text/javascript" src="./js/global/Constants.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/global/Global.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/global/ValueObject.js" charset="utf-8"></script>	
+    <!-- <script src="./test.js" type="application/x-javascript" charset="utf-8"></script>-->   
+	
+    <!-- Application script files -->
+	<script type="text/javascript" src="./js/setting/SettingFacade.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/setting/SettingMediator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/setting/SettingProxy.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/setting/SettingCommand.js" charset="utf-8"></script>
+	
+    <script type="text/javascript" src="./js/main/MainFacade.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/main/MainMediator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/main/MainProxy.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/main/MainCommand.js" charset="utf-8"></script>
+    
+    <script type="text/javascript" src="./js/praised/PraisedFacade.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/praised/PraisedMediator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/praised/PraisedProxy.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/praised/PraisedCommand.js" charset="utf-8"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+    	var jQT = new $.jQTouch({
+		  icon:'jqtouch.png'		  
+		});
+		var settingFacade = new praisedApp.SettingFacade();
+		var praisedFacade = new praisedApp.PraisedFacade();
+		var mainFacade = new praisedApp.MainFacade();		
+		
+		
+		function onBodyLoad(){									
+			settingFacade.getSettingData();
+			//praisedFacade.getPraisedListToFile();					
+		}
+		function onDeviceReady(){
+			mainFacade.showMainPage();
+			//praisedFacade.showPraisedPage();
+		}
+    </script>
+    
+  </head>
+  <body onload="onBodyLoad()">
+    <div id="jqt">
+    	
+		<div id="test">		
+		  	
+		</div>
+		
+		<div id="mainview">
+			<div class="toolbar">
+				<h1>칭찬</h1>	
+				<a class="button" target="_blank" href="http://uksmart.dothome.co.kr/index.php/iphone_apps/praised">About</a>			
+			</div>			
+			<div id="mainview-wrapper">		
+				
+			</div>
+		</div>	
+		
+		<div id="effect">
+			<div class="toolbar">
+				<h1>칭찬 효과</h1>
+				<a class="back" href="#">Main</a>
+			</div>
+
+			<h2>칭찬은 고래도 춤추게 한다</h2>
+			<ul class="edit rounded"> 
+			  <li>
+				무게 3톤이 넘는 범고래의 쇼를 본 적이 있는가?<br>
+				플로리다에 있는 씨월드라는 해양관에서는 바다의 포식자로 알려진 거대한 몸통의 범고래가 환상적인 점프를 통해 멋진 쇼를 펼쳐보인다.<br>
+				그런데 조련사는 어떻게 해서 범고래로 하여금 그렇게 멋진 쇼를 펼쳐보일 수 있게 만든 것일까?<br>
+				‘고래 반응(Whale Done response)’이라 불리는 범고래 훈련법은 성공적인 인간관계를 위한 훈련법과 다르지 않다. <br>
+				‘고래 반응’이란?<br>
+				① 범고래가 쇼를 멋지게 해냈을 때는 즉각적으로 칭찬하고<br>
+				② 실수를 했을 때는 질책하는 대신에 관심을 다른 방향으로 유도하며<br>
+				③ 중간중간에 계속해서 격려하는 것이 핵심이다.<br>
+				누구나 인간관계에서 긍정적 관심과 칭찬 그리고 격려가 중요하다고 생각한다.<br>
+				그러나 실제로 가정과 직장의 일상생활에서 다른 사람에 대해 긍정적 관심을 가지고 지속적으로 칭찬과 격려를 하는 사람은 드물다.<br>
+				오히려 우리 삶은 타인에 대한 무관심과 부정적 반응으로 둘러싸여 있다.
+				<p class="refer	">칭찬은 고래도 춤추게 한다 소개 중</p>  
+			  </li>
+			</ul>			  
+		</div>
+		
+		<div id="praisedview">
+			<div class="toolbar">
+				<h1>칭찬 듣기</h1>
+				<a class="back" href="#">Main</a>
+			</div>			
+			<div id="praisedview-wrapper">		
+				
+			</div>
+		</div>
+		
+      
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
